@@ -7,7 +7,7 @@ $(document).ready(function(){
     console.log(number1, number2);
  
     for (var index = 0; index <= number1; index += number2) {
-      console.log(number1, number2, index);
+      $('#output').append(index +',');
     }
 
   });
