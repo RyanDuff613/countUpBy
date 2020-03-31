@@ -18,17 +18,20 @@ $(document).ready(function(){
       }
     }*/
 
-    for (var index = 0; index <= number1; index += number2) {
-      if (number1='NaN') {
-        alert('oops, you need to enter a number for this to work, please refresh page and try again');
-      } else if (number1 <= 0 || number2 <= 0) {
-        alert('sorry, this page only works with positive numbers');
-      } else if (number2 > number1) {
-        alert('you cannot count to ' + number1 + ' in increments of '+ number2 + ' because ' + number2 + ' is larger than ' + number1);
-      } else {
+    if (number1 === 'NaN' || number2 === 'NaN') {
+      alert('oops, you need to enter a number for this to work, please refresh page and try again');
+    } else if (number1 <= 0 || number2<=0) {
+      alert('sorry, this page only works with positive numbers');
+    } else if (number2 > number1) {
+      alert('you cannot count to ' + number1 + ' in increments of '+ number2 + ' because ' + number2 + ' is larger than ' + number1);
+    } else {
+      for (var index = 0; index <= number1; index += number2) {
         $('#output').append(index +',');
       }
     }
+
+
+    
 
   });
 });
